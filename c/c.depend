@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1740933564 source:d:\projekte\10_gitworkdir\10_sudokuresolver\c\main.c
+	<stdio.h>
+	<stdlib.h>
+
