@@ -1,15 +1,14 @@
 # depslib dependency file v1.0
-1785740673 source:d:\projekte\10_gitworkdir\10_sudokuresolver\c\main.c
+1785791042 source:d:\projekte\10_gitworkdir\10_sudokuresolver\c\main.c
 	<stdio.h>
 	<stdlib.h>
-	"ui.h"
 	"datagrids.h"
-
-1785739900 source:d:\projekte\10_gitworkdir\10_sudokuresolver\c\ui.c
 	"ui.h"
-	"datagrids.h"
 
-1785740935 d:\projekte\10_gitworkdir\10_sudokuresolver\c\ui.h
+1785791041 source:d:\projekte\10_gitworkdir\10_sudokuresolver\c\ui.c
+	"ui.h"
+
+1785761134 d:\projekte\10_gitworkdir\10_sudokuresolver\c\ui.h
 
 1785740306 source:d:\projekte\10_gitworkdir\10_sudokuresolver\c\datagrids.c
 	"datagrids.h"

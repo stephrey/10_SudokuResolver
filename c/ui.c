@@ -32,6 +32,27 @@
  ******************************************************************************/
 #include "ui.h"
 
+void MenuStart(void){
+    system("cls");
+    printf("************************************\n");
+    printf("** Welcome in the SUDOKU resolver **\n");
+    printf("************************************\n");
+    printf("\n");
+    printf("start menu: \n");
+    printf("----------: \n");
+    printf("-> select an option (numbers 1 through 9)\n");
+    printf("1) .. \n");
+    printf("2) .. \n");
+    printf("3) .. \n");
+    printf("4) .. \n");
+    printf("5) .. \n");
+    printf("6) .. \n");
+    printf("7) .. \n");
+    printf("8) .. \n");
+    printf("9) .. \n");
+    printf("...or press 'Q' or 'q' to exit the programm: ");
+}
+
 void PrintTable(int (*table)[9][9]){
     int lin=0, col=0;                     // lin = line, col = column
     for (lin=0; lin<9; lin++){

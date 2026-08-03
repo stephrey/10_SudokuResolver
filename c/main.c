@@ -36,12 +36,43 @@
 #include "datagrids.h"
 #include "ui.h"
 
-
 int main()
 {
-    printf("Welcome in the SUDOKU resolver\n");
-    printf("******************************\n");
+    char selection;
 
-    PrintTable(*tableau_00);
+    MenuStart();
+
+    while(1){
+        scanf(" %c", &selection);           // The space before %c instructs scanf to ignore any remaining whitespace characters in the buffer, including the line break caused by the Enter key.
+
+        if (selection == 'Q' || selection == 'q'){
+            printf("The program is going to be shut down...\n");
+            break;
+        }
+
+        switch(selection){
+            case '1':{
+                system("cls");
+                printf("1 selected");
+                break;
+            }
+
+            case '2':{
+                system("cls");
+                printf("2 selected");
+                PrintTable(*tableau_00);
+                break;
+            }
+
+            default:{
+                MenuStart();
+                break;
+            }
+        }
+
+    }
+
+    // Sleep(1000);    // 10 000 ms = 10 s
+
     return 0;
 }
