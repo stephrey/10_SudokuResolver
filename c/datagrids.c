@@ -1,28 +1,24 @@
 /******************************************************************************
- * File        : main.c
+ * File        : datagrids.c
  * Project     : SudokuResolver
  * Author      : Stephane Rey
- * Created     : 02.08.2026
- * Last Update : 02.08.2026
+ * Created     : 03.08.2026
+ * Last Update : 03.08.2026
  * Version     : 0.0.1
  *
  * Description :
  * ----------------------------------------------------------------------------
- * This program is a Sudoku grid solver.
+ * Ready-to-use Sudoku grids for testing purposes.
  *
  * Example :
- * The included Sudoku practice puzzles allow you to test the various solving
- * algorithms. This program also includes a small command-line graphical interface
- * that lets you enter a new puzzle and solve one of them manually.
+ * This program contains ready-to-use Sudoku grids.
+ * These are training data for testing the main SudokuResolver program.
  *
  * Target       : x64
  * Compiler     : GCC
  * IDE          : Code::bloc
  *
  * Dependencies :
- * - stdio.h
- * - stdint.h
- * - ui.h
  * - datagrids.h
  *
  * Notes :
@@ -31,17 +27,17 @@
  *
  * Copyright (c) 2026
  ******************************************************************************/
-#include <stdio.h>
-#include <stdlib.h>
 #include "datagrids.h"
-#include "ui.h"
 
-
-int main()
+int tableau_00[9][9] =
 {
-    printf("Welcome in the SUDOKU resolver\n");
-    printf("******************************\n");
-
-    PrintTable(*tableau_00);
-    return 0;
-}
+    {0,0,0,0,1,0,7,2,0},
+    {0,0,3,2,7,8,0,9,0},
+    {0,5,7,0,0,0,3,0,8},
+    {0,0,0,9,6,0,0,7,1},
+    {0,0,0,0,8,2,0,6,3},
+    {1,9,6,0,0,0,0,4,2},
+    {3,0,8,0,2,9,0,0,4},
+    {0,0,9,0,5,1,0,0,0},
+    {0,6,0,7,0,3,0,8,9}
+};
