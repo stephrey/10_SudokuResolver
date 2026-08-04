@@ -1,7 +1,7 @@
 #ifndef UI_H_INCLUDED
 #define UI_H_INCLUDED
 
-void MenuStart(void);
+void MainMenu(void);
 void PrintTable(int (*table)[9][9]);
 
 // not implemented yet

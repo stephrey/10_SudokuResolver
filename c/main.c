@@ -38,12 +38,12 @@
 
 int main()
 {
+    // application setup
     char selection;
-
-    MenuStart();
+    MainMenu();
 
     while(1){
-        scanf(" %c", &selection);           // The space before %c instructs scanf to ignore any remaining whitespace characters in the buffer, including the line break caused by the Enter key.
+        scanf(" %c", &selection); // The space before %c instructs scanf to ignore any remaining whitespace characters in the buffer, including the line break caused by the Enter key.
 
         if (selection == 'Q' || selection == 'q'){
             printf("The program is going to be shut down...\n");
@@ -53,19 +53,24 @@ int main()
         switch(selection){
             case '1':{
                 system("cls");
-                printf("1 selected");
+                printf("1 selected\n\n");
+                printf("-> select an option: (?tbd?)\n");
+                printf("   ...or press 'Q' or 'q' to exit the programm: ");
                 break;
             }
 
             case '2':{
                 system("cls");
-                printf("2 selected");
+                printf("2 selected\n\n");
                 PrintTable(*tableau_00);
+                printf("\n");
+                printf("-> select an option: (?tbd?)\n");
+                printf("   ...or press 'Q' or 'q' to exit the programm: ");
                 break;
             }
 
             default:{
-                MenuStart();
+                MainMenu();
                 break;
             }
         }

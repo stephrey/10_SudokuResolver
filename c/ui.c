@@ -32,7 +32,7 @@
  ******************************************************************************/
 #include "ui.h"
 
-void MenuStart(void){
+void MainMenu(void){
     system("cls");
     printf("************************************\n");
     printf("** Welcome in the SUDOKU resolver **\n");
@@ -50,7 +50,7 @@ void MenuStart(void){
     printf("7) .. \n");
     printf("8) .. \n");
     printf("9) .. \n");
-    printf("...or press 'Q' or 'q' to exit the programm: ");
+    printf("   ...or press 'Q' or 'q' to exit the programm: ");
 }
 
 void PrintTable(int (*table)[9][9]){
