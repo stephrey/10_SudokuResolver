@@ -3,6 +3,7 @@
 
 void MainMenu(void);
 void PrintTable(int (*table)[9][9]);
+void PrintSolver(int (*table)[9][9][9]);
 
 // not implemented yet
 void EnterTableToBeSolved(int (*table)[9][9]);

@@ -44,6 +44,7 @@ int main()
     // application initialisation
     char selection;
     GridReset(*GridToSolve);
+    SolverReset(*SolverData);
     MainMenu();
 
     while(1){
@@ -62,7 +63,7 @@ int main()
                 printf("************************************\n");
                 printf("\n");
                 printf("-> select an option:\n");
-                printf("   press 'm' or 'M' to go to the main menu: ");
+                printf("   press 'm' or 'M' to go to the main menu: \n");
                 printf("   ...or press 'Q' or 'q' to exit the programm: ");
                 GridCpy(*tableau_00, *GridToSolve);
                 break;
@@ -77,7 +78,21 @@ int main()
                 PrintTable(*GridToSolve);
                 printf("\n");
                 printf("-> select an option:\n");
-                printf("   press 'm' or 'M' to go to the main menu: ");
+                printf("   press 'm' or 'M' to go to the main menu: \n");
+                printf("   ...or press 'Q' or 'q' to exit the programm: ");
+                break;
+            }
+
+            case '4':{
+                system("cls");
+                printf("************************************\n");
+                printf("** Print solver                   **\n");
+                printf("************************************\n");
+                printf("\n");
+                PrintSolver(*SolverData);
+                printf("\n");
+                printf("-> select an option:\n");
+                printf("   press 'm' or 'M' to go to the main menu: \n");
                 printf("   ...or press 'Q' or 'q' to exit the programm: ");
                 break;
             }

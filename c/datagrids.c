@@ -58,3 +58,11 @@ void GridReset(int (*source)[9][9]){
         src[i] = 0;
     }
 }
+
+void SolverReset(int (*source)[9][9][9]){
+    int *src = &source[0][0][0];
+
+    for (int i=0; i<729; i++){
+        src[i] = 0;
+    }
+}
