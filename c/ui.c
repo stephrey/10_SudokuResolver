@@ -41,8 +41,8 @@ void MainMenu(void){
     printf("start menu: \n");
     printf("----------: \n");
     printf("-> select an option (numbers 1 through 9)\n");
-    printf("1) .. \n");
-    printf("2) .. \n");
+    printf("1) Select the grid to solve\n");
+    printf("2) Print current grid\n");
     printf("3) .. \n");
     printf("4) .. \n");
     printf("5) .. \n");

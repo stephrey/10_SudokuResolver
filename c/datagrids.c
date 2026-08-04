@@ -41,3 +41,20 @@ int tableau_00[9][9] =
     {0,0,9,0,5,1,0,0,0},
     {0,6,0,7,0,3,0,8,9}
 };
+
+void GridCpy(int (*source)[9][9], int (*destination)[9][9]){
+    int *src = &source[0][0];
+    int *dst = &destination[0][0];
+
+    for (int i=0; i<81; i++){
+        dst[i] = src[i];
+    }
+}
+
+void GridReset(int (*source)[9][9]){
+    int *src = &source[0][0];
+
+    for (int i=0; i<81; i++){
+        src[i] = 0;
+    }
+}
