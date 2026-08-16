@@ -17,7 +17,7 @@
  *
  * Target       : x64
  * Compiler     : GCC
- * IDE          : Code::bloc
+ * IDE          : Code::blocs
  *
  * Dependencies :
  * - stdio.h
@@ -32,6 +32,7 @@
  ******************************************************************************/
 #include "ui.h"
 
+/* main menu page */
 void MainMenu(void){
     system("cls");
     printf("************************************\n");
@@ -49,10 +50,11 @@ void MainMenu(void){
     printf("6) .. \n");
     printf("7) .. \n");
     printf("8) .. \n");
-    printf("9) .. \n");
+    printf("9) For different tests \n");
     printf("   ...or press 'Q' or 'q' to exit the programm: ");
 }
 
+/* print sudoku table's page */
 void PrintTable(int (*table)[9][9]){
     // local variable to fill the table
     int lin=0, col=0;                     // lin = line, col = column
@@ -76,26 +78,33 @@ void PrintTable(int (*table)[9][9]){
     printf("|=======================|\n");
 }
 
+/* print the sudoku solver's page */
 void PrintSolver(int (*table)[9][9][9]){
     // local variable to fill the table
-    int lin=0, col=0;
+    int lin=0, col=0, cand=0;   // for SolverData[line][colomn][candidate]
+    int i=0, j=0;               // index for 27x27 matrix
+
     // draw lines loop
-    for (lin=0; lin<27; lin++){
-        // draw separation line
-        if ((lin % 9) == 0){
+    for (i=0; i<27; i++){
+        lin = i / 3;
+        // draw horizontal separation line
+        if ((i % 9) == 0){
             printf("//=========================================================================//\n");
-        } else if ((lin % 3) == 0){
+        } else if ((i % 3) == 0){
             printf("//-------------------------------------------------------------------------//\n");
         }
         // draw column elements
-        for (col=0; col<27; col++){
-            if ((col % 9) == 0){
+        for (j=0; j<27; j++){
+            col = j / 3;
+            // dran vertical separators
+            if ((j % 9) == 0){
                 printf("// ");
-            } else if ((col % 3) == 0){
+            } else if ((j % 3) == 0){
                 printf("| ");
             }
-            // print value
-            printf("0 ");
+            // print value (position 1..9 inside the Sudoku cell)
+            cand = (i % 3) * 3 + (j % 3);
+            printf("%d ", (*table)[lin][col][cand]);
         }
         // CR+LF at the end of each line
         printf("//\n");
