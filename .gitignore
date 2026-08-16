@@ -1,0 +1,49 @@
+# ============================================================
+# C / Code::Blocks
+# Ces règles ne concernent que le dossier C/
+# ============================================================
+
+# Fichiers temporaires générés par Code::Blocks
+/C/*.depend
+/C/*.layout
+
+# Répertoires de compilation Code::Blocks
+/C/bin/
+/C/obj/
+
+# Fichiers objets C
+/C/**/*.o
+/C/**/*.obj
+
+# Exécutables générés dans le projet C
+/C/**/*.exe
+/C/**/*.out
+
+# Bibliothèques compilées
+/C/**/*.a
+/C/**/*.lib
+/C/**/*.dll
+/C/**/*.so
+/C/**/*.dylib
+
+# Fichiers de debug
+/C/**/*.pdb
+
+# Fichiers temporaires
+/C/**/*.tmp
+/C/**/*.temp
+/C/**/*.log
+/C/**/*.bak
+
+
+# ============================================================
+# Fichiers système
+# Ceux-ci peuvent être ignorés dans tout le dépôt
+# ============================================================
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
