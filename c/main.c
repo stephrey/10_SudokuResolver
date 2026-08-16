@@ -17,7 +17,7 @@
  *
  * Target       : x64
  * Compiler     : GCC
- * IDE          : Code::bloc
+ * IDE          : Code::blocs
  *
  * Dependencies :
  * - stdio.h
@@ -38,12 +38,13 @@
 
 int main()
 {
-    int GridToSolve[9][9];
-    int SolverData[9][9][9];
+    int DAT_GridToSolve[9][9];      // GridToSolve[line][colomn]
+    int DAT_SolverData[9][9][9];    // SolverData[line][colomn][candidate]
 
-    // application initialisation
+    // application initialization
     char selection;
-    GridReset(*GridToSolve);
+    GridReset(&DAT_GridToSolve);
+    SolverReset(&DAT_SolverData);
     MainMenu();
 
     while(1){
@@ -62,9 +63,9 @@ int main()
                 printf("************************************\n");
                 printf("\n");
                 printf("-> select an option:\n");
-                printf("   press 'm' or 'M' to go to the main menu: ");
-                printf("   ...or press 'Q' or 'q' to exit the programm: ");
-                GridCpy(*tableau_00, *GridToSolve);
+                printf("   press 'm' or 'M' to go to the main menu: \n");
+                printf("   ...or press 'Q' or 'q' to exit the program: ");
+                GridCpy(&tableau_00, &DAT_GridToSolve);
                 break;
             }
 
@@ -74,23 +75,60 @@ int main()
                 printf("** Print current grid             **\n");
                 printf("************************************\n");
                 printf("\n");
-                PrintTable(*GridToSolve);
+                PrintTable(&DAT_GridToSolve);
                 printf("\n");
                 printf("-> select an option:\n");
-                printf("   press 'm' or 'M' to go to the main menu: ");
-                printf("   ...or press 'Q' or 'q' to exit the programm: ");
+                printf("   press 'm' or 'M' to go to the main menu: \n");
+                printf("   ...or press 'Q' or 'q' to exit the program: ");
+                break;
+            }
+
+            case '4':{
+                system("cls");
+                printf("************************************\n");
+                printf("** Print solver                   **\n");
+                printf("************************************\n");
+                printf("\n");
+                PrintSolver(&DAT_SolverData);
+                printf("\n");
+                printf("-> select an option:\n");
+                printf("   press 'm' or 'M' to go to the main menu: \n");
+                printf("   ...or press 'Q' or 'q' to exit the program: ");
+                break;
+            }
+
+            case '9':{
+                system("cls");
+                printf("************************************\n");
+                printf("** TESTS                          **\n");
+                printf("************************************\n");
+                printf("\n");
+                printf("Test the 'SolverTest' function\n");
+                printf("\n");
+                SolverReset(&DAT_SolverData);
+                SolverTest(&DAT_SolverData);
+                PrintSolver(&DAT_SolverData);
+                printf("\n\n");
+                printf("-> select an option:\n");
+                printf("   press 'm' or 'M' to go to the main menu: \n");
+                printf("   ...or press 'Q' or 'q' to exit the program: ");
                 break;
             }
 
             default:{
-                MainMenu();
+                system("cls");
+                printf("**********************\n");
+                printf("FUNCTION NOT SUPPORTED\n");
+                printf("**********************\n");
+                printf("\n");
+                printf("   press the 'C' or 'c' key to continue: ");
+                if (selection == 'C' || selection == 'c'){
+                    MainMenu();
+                }
                 break;
             }
         }
 
     }
-
-    // Sleep(1000);    // 10 000 ms = 10 s
-
     return 0;
 }
