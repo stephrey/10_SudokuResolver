@@ -16,7 +16,7 @@
  *
  * Target       : x64
  * Compiler     : GCC
- * IDE          : Code::blocs
+ * IDE          : Code::Blocks
  *
  * Dependencies :
  * - datagrids.h
@@ -80,26 +80,4 @@ void SolverTest(int (*source)[9][9][9]){
             }
         }
     }
-    /*
-    int *src = &source[0][0][0];
-    int line, cell, val = 0;
-    // fill table of 729 elements: (3 * 9 = 27) (27 * 27 = 729)
-    for (int i=0; i<729; i++){
-        // line count
-        line = (i / 27) + 1;        // entire division of "i" to calculate the line number (first line = 1)
-        // cell in line count
-        cell = (i % 3) + 1;         // modulo of "i" to repeat the suite in each section
-        // fill table
-        if ((line % 3) == 1){
-            val = cell + 0;
-        } else if ((line % 3) == 2){
-            val = cell + 3;
-        } else if ((line % 3) == 3){
-            val = cell + 6;
-        }
-        // attribute cell value
-        src[i] = val;
-        //printf("%d \n", line);
-    }
-    */
 }

@@ -17,7 +17,7 @@
  *
  * Target       : x64
  * Compiler     : GCC
- * IDE          : Code::blocs
+ * IDE          : Code::Blocks
  *
  * Dependencies :
  * - stdio.h

@@ -17,7 +17,7 @@
  *
  * Target       : x64
  * Compiler     : GCC
- * IDE          : Code::blocs
+ * IDE          : Code::Blocks
  *
  * Dependencies :
  * - stdio.h
@@ -47,6 +47,7 @@ int main()
     SolverReset(&DAT_SolverData);
     MainMenu();
 
+    // UI state machine (loop)
     while(1){
         scanf(" %c", &selection); // The space before %c instructs scanf to ignore any remaining whitespace characters in the buffer, including the line break caused by the Enter key.
 
